@@ -32,7 +32,7 @@ const Home: ActivityComponentType = () => {
     
     return (
         <PageLayout>
-            <Box as="header" p={4} display={"flex"}>
+            <Box as="header" p={4} display={"flex"} position={"sticky"} top={0} zIndex={1} backgroundColor={"white"}>
                 <Flex align={"center"} justify="space-between" width="100%">
                     <Image src={logo} borderRadius={2}/>
                     <Box display="flex" width={"100%"} ml={4}>
@@ -45,28 +45,23 @@ const Home: ActivityComponentType = () => {
                     </Box>
                 </Flex>
             </Box>
-            {Array7.map(() => {
+            {Array7.map((_ , index) => {
                 return(
                     <Container as="section" py={4}>
                         <Card justify={"end"} direction={"column"} backgroundColor={"orange.400"} color={"white"}>
                             <CardHeader p={2}>
                                 <Box display={"flex"}>
                                     <Flex direction={"row"} align={"center"} gap={2}>
-                                        <Heading as="h2" size={"lg"}>QT</Heading>
-                                        <Text>2월 13일</Text>
+                                        <Heading as="h2" size={"lg"}>제자양육</Heading>
+                                        <Text>{`${index + 1}과`}</Text>
                                     </Flex>
                                 </Box>
                             </CardHeader>
                             <CardBody p={2}>
                                 <Box>
-                                    <Flex align={"center"} justify={"space-between"}>
-                                        <Box>
-                                            <Flex direction={"column"} align={"start"}>
-                                                <Heading as={"h3"} size={"lg"}>제목: 느헤미야의 기도</Heading>
-                                                <Text>에스더 4장 23절</Text>
-                                            </Flex>
-                                        </Box>
-                                        <Heading as={"h3"} size={"md"}>남건영 부목사</Heading>
+                                    <Flex direction={"column"} align={"start"}>
+                                        <Heading as={"h3"} size={"lg"} textAlign={"start"}>하나님은 나를 영원히 사랑하시는 분이십니다</Heading>
+                                        <Text>에스더 4장 23절</Text>
                                     </Flex>
                                 </Box>
                             </CardBody>
