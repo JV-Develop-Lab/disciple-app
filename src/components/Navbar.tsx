@@ -33,7 +33,7 @@ const LinkItem = ({children, fill, outline, activityName, ...props} : LinkItemPr
 
 export default function Navbar(){
     
-    return(<Box as="div" position="absolute" bottom={0} display="flex" width="100%" height="60px">
+    return(<Box as="div" position="absolute" bottom={0} display="flex" width="100%" height="60px" backgroundColor={"white"}>
         <Flex align="center" justify="space-around" direction="row" width="100%">
             <LinkItem fill={<AiFillHome size={24}/>} outline={<AiOutlineHome size={24}/>} activityName="Home"/>
             <LinkItem fill={<AiFillHeart size={24}/>} outline={<AiOutlineHeart size={24}/>} activityName="Book"/>

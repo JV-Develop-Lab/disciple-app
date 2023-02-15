@@ -1,19 +1,16 @@
-import { ActivityComponentType } from "@stackflow/react";
-import {Box} from "@chakra-ui/react";
-import PageLayout from "../components/layouts/PageLayout";
+import {Box, Button, Center} from "@chakra-ui/react";
+import {AppScreen} from "@stackflow/plugin-basic-ui";
+import {useFlow} from "../stackflow";
 
-type ArticleParams = {
-    title: string;
-};
-const Book: ActivityComponentType<ArticleParams> = ({ params }) => {
-    
-    return (
-        <PageLayout>
-            <Box height="100%">
-                <h1>{params.title}</h1>
+export default function Book(){
+    const {pop} = useFlow();
+    return(
+        <AppScreen>
+            <Box height={"100%"} width="100%" backgroundColor={"black"}>
+                <Center>
+                    <Button onClick={pop}>닫기</Button>
+                </Center>
             </Box>
-        </PageLayout>
-    );
-};
-
-export default Book;
+        </AppScreen>
+    )
+}

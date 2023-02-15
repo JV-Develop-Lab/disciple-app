@@ -7,10 +7,12 @@ type PageLayoutProps = HTMLAttributes<HTMLDivElement>;
 
 export default function PageLayout({...props}: PageLayoutProps){
     return <AppScreen>
-        <Box as="main" position="relative" h="100%" width="100%">
-            {props.children}
+        <Box as="main" position="relative" h="100vh" width="100%" overflow={"hidden"}>
+            <Box overflow={"scroll"} width={"100%"} height={"100%"} pb={"60px"}>
+                {props.children}
+            </Box>
+            <Navbar/>
         </Box>
-        <Navbar/>
     </AppScreen>
     
 }

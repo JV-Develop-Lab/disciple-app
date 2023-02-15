@@ -5,10 +5,12 @@ import { basicRendererPlugin } from "@stackflow/plugin-renderer-basic";
 import { basicUIPlugin } from "@stackflow/plugin-basic-ui";
 
 import Home from "./pages/Home";
+import Info from "./pages/Info";
 import Book from "./pages/Book";
 
 export const activities = {
     Home,
+    Info,
     Book
 }
 
